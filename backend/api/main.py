@@ -8,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://wezy18.github.io/background-remover/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
