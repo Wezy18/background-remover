@@ -67,6 +67,9 @@ input[type="file"] {
 .button-section {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 button {
@@ -100,10 +103,21 @@ img {
 
 #downloadLink {
   display: none;
-  text-align: center;
+  padding: 0.9rem 1.5rem;
+  background-color: #d9b15f;
+  color: #fff9f2;
   text-decoration: none;
-  color: #6f9fa3;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 600;
+  min-width: 220px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+#downloadLink:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 #imageInput {
@@ -133,6 +147,12 @@ img {
   max-height: 400px;
   display: none;
   margin-top: 1rem;
+}
+
+#fileName {
+  margin-top: 0.5rem;
+  color: #8b7b70;
+  font-size: 0.9rem;
 }
 
 footer {

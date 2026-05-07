@@ -3,6 +3,15 @@ const removeBtn = document.getElementById("removeBtn");
 const resultImage = document.getElementById("resultImage");
 const downloadLink = document.getElementById("downloadLink");
 const imageBtn = document.getElementById("imageBtn");
+const fileName = document.getElementById("fileName");
+
+imageInput.addEventListener("change", () => {
+  if (imageInput.files.length > 0) {
+    fileName.textContent = imageInput.files[0].name;
+  } else {
+    fileName.textContent = "No image selected";
+  }
+});
 
 imageBtn.addEventListener("click", () => {
   imageInput.click();
