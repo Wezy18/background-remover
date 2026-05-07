@@ -6,8 +6,6 @@
 
 **API Health Endpoint:** https://background-remover-999520341103.us-central1.run.app/health
 
----
-
 ## Overview
 
 The Background Remover is a full-stack web application that allows users to upload an image, automatically remove its background using AI-powered image processing, preview the result instantly, and download the transparent PNG.
@@ -15,8 +13,6 @@ The Background Remover is a full-stack web application that allows users to uplo
 This project was built to explore the full workflow of developing and deploying a modern web application, from frontend interaction and responsive UI design to backend API development, Docker containerization, and cloud deployment.
 
 The application focuses on keeping the experience simple, approachable, and responsive while still handling real image processing through a deployed backend service.
-
----
 
 ## About the Project
 
@@ -42,8 +38,6 @@ The project covers several modern development and deployment concepts:
 - Responsive frontend design and UX improvements
 - Integrating GitHub Pages with a cloud-hosted API
 
----
-
 ## Features
 
 - AI-powered background removal using rembg  
@@ -55,8 +49,6 @@ The project covers several modern development and deployment concepts:
 - Cloud-hosted backend API using Google Cloud Run  
 - Dockerized backend deployment workflow  
 - GitHub Pages frontend deployment  
-
----
 
 ## Tech Stack
 
@@ -80,8 +72,6 @@ The project covers several modern development and deployment concepts:
 - GitHub Pages
 - GitHub
 
----
-
 ## Project Structure
 
 ```
@@ -103,8 +93,6 @@ background-remover/
 └── README.md
 ```
 
----
-
 ## How It Works
 
 ### Frontend Flow
@@ -124,8 +112,6 @@ background-remover/
    - Converts the processed image into PNG format
    - Streams the result back to the frontend
    - Allows the frontend to preview and download the output
-
----
 
 ## Running the Project Locally
 
@@ -179,8 +165,6 @@ The backend will run at: `http://127.0.0.1:8000`
 
 The frontend will communicate with the backend API through the configured fetch endpoint.
 
----
-
 ## API Endpoint
 
 ### Remove Background
@@ -200,8 +184,6 @@ The frontend will communicate with the backend API through the configured fetch 
 
 Returns a processed PNG image with the background removed.
 
----
-
 ## Deployment
 
 ### Frontend Deployment
@@ -219,8 +201,6 @@ The backend is containerized using Docker and deployed through Google Cloud Run.
 - Public API routing
 - CORS configuration between frontend and backend services
 
----
-
 ## Challenges & Learning Experience
 
 One of the main goals of this project was gaining hands-on experience with deployment workflows and cloud-hosted backend services.
@@ -236,8 +216,6 @@ During development, I worked through:
 
 This project helped strengthen both frontend development skills and understanding of backend deployment pipelines.
 
----
-
 ## Possible Future Improvements
 
 -  Drag-and-drop image uploads
@@ -250,8 +228,6 @@ This project helped strengthen both frontend development skills and understandin
 -  User accounts and saved uploads
 -  File size optimization and compression settings
 
----
-
 ## Purpose & Career Focus
 
 This project was built to strengthen experience with full-stack development and cloud deployment workflows while creating a practical, user-focused application.
@@ -263,8 +239,6 @@ It reflects:
 - Interest in responsive, approachable UI design
 - Experience debugging and deploying real-world web applications
 - Ability to work through infrastructure and deployment challenges independently
-
----
 
 ## Author
 
