@@ -3,18 +3,40 @@
   <head>
     <title>Background Remover</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Background Remover</h1>
+    <header>
+      <h1>Background Remover</h1>
+    </header>
 
-    <input type="file" id="imageInput" />
-    <button id="removeBtn">Remove Background</button>
+    <main>
+      <div class='upload-section '>
+        <p>Upload an image to remove its background.</p>
+        <input type="file" id="imageInput" />
 
-    <div class="result">
-      <img id="resultImage" />
-    </div>
+        <img src="images/camera-logo.svg" 
+          id="imageBtn" 
+          alt="Upload" />
 
-    <a id="downloadLink" download>Download Image</a>
+        <div class="result">
+          <img id="resultImage" />
+        </div>
+
+      </div>
+      
+      <div class='button-section'>
+        <button id="removeBtn">Remove Background</button>
+        <a id="downloadLink" download>Download Image</a>
+      </div>
+      
+    </main>
+
+    <footer>
+      <p>Rebecca Corder 2026</p>
+    </footer>
 
     <script src="app.js"></script>
   </body>

@@ -1,22 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <400>;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
-  max-width: 600px;
-  margin: 40px auto;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle at center, #B5D1CF 0%, #8FB6B3 100%);
+  color: #5a463b;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+h1 {
+  color: #fff9f2;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+main {
+  width: min(900px, 90%);
+  margin: 0 auto;
+  background-color: #fff9f2;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.02),
+    0 12px 24px rgba(0, 0, 0, 0.04),
+    0 20px 40px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.upload-section {
+  border: 3px dashed #d9b15f;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f6f1e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+input[type="file"] {
+  width: 100%;
+  color: #5a463b;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
 }
 
 button {
-  margin-top: 10px;
+  padding: 0.9rem 1.5rem;
+  background-color: #d9b15f;
+  color: #fff9f2;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  min-width: 220px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 .result {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 img {
   max-width: 100%;
+  border-radius: 12px;
 }
 
 #downloadLink {
   display: none;
-  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #6f9fa3;
+  font-weight: 600;
+}
+
+#imageInput {
+  display: none;
+}
+
+#imageBtn {
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+}
+
+#imageBtn:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+#imageBtn:active {
+  transform: translateY(1px);
+  transition: 0.2s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #fff9f2;
 }

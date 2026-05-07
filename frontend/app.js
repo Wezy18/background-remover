@@ -3,6 +3,13 @@ const removeBtn = document.getElementById("removeBtn");
 const resultImage = document.getElementById("resultImage");
 const downloadLink = document.getElementById("downloadLink");
 
+const imageBtn = document.getElementById('imageBtn');
+const fileInput = document.getElementById('imageInput');
+
+  imageBtn.addEventListener('click', () => {
+    fileInput.click();
+  });
+
 removeBtn.addEventListener("click", async () => {
   const file = imageInput.files[0];
 
