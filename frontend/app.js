@@ -2,33 +2,49 @@ const imageInput = document.getElementById("imageInput");
 const removeBtn = document.getElementById("removeBtn");
 const resultImage = document.getElementById("resultImage");
 const downloadLink = document.getElementById("downloadLink");
+const imageBtn = document.getElementById("imageBtn");
 
-const imageBtn = document.getElementById('imageBtn');
-const fileInput = document.getElementById('imageInput');
-
-  imageBtn.addEventListener('click', () => {
-    fileInput.click();
-  });
+imageBtn.addEventListener("click", () => {
+  imageInput.click();
+});
 
 removeBtn.addEventListener("click", async () => {
   const file = imageInput.files[0];
 
   if (!file) {
+    alert("Please select an image first.");
     return;
   }
 
-  const formData = new FormData();
-  formData.append("file", file);
+  try {
+    removeBtn.textContent = "Removing...";
 
-  const response = await fetch("https://background-remover-999520341103.us-central1.run.app/remove-bg", {
-    method: "POST",
-    body: formData,
-  });
+    const formData = new FormData();
+    formData.append("file", file);
 
-  const blob = await response.blob();
-  const imageUrl = URL.createObjectURL(blob);
+    const response = await fetch(
+      "https://background-remover-999520341103.us-central1.run.app/remove-bg",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
-  resultImage.src = imageUrl;
-  downloadLink.href = imageUrl;
-  downloadLink.style.display = "inline";
+    if (!response.ok) {
+      throw new Error("Failed to remove background.");
+    }
+
+    const blob = await response.blob();
+    const imageUrl = URL.createObjectURL(blob);
+
+    resultImage.src = imageUrl;
+
+    downloadLink.href = imageUrl;
+    downloadLink.style.display = "inline-block";
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  } finally {
+    removeBtn.textContent = "Remove Background";
+  }
 });
