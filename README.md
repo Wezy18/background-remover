@@ -46,15 +46,15 @@ The project covers several modern development and deployment concepts:
 
 ## Features
 
-✨ AI-powered background removal using rembg  
-📤 Image upload and processing directly in the browser  
-👁️ Instant image preview after processing  
-⬇️ Downloadable transparent PNG output  
-📱 Responsive design for desktop and mobile devices  
-🎨 Custom upload interface with visual feedback  
-☁️ Cloud-hosted backend API using Google Cloud Run  
-🐳 Dockerized backend deployment workflow  
-📄 GitHub Pages frontend deployment  
+- AI-powered background removal using rembg  
+- Image upload and processing directly in the browser  
+- Instant image preview after processing  
+- Downloadable transparent PNG output  
+- Responsive design for desktop and mobile devices  
+- Custom upload interface with visual feedback  
+- Cloud-hosted backend API using Google Cloud Run  
+- Dockerized backend deployment workflow  
+- GitHub Pages frontend deployment  
 
 ---
 
@@ -240,15 +240,15 @@ This project helped strengthen both frontend development skills and understandin
 
 ## Possible Future Improvements
 
-- 🎯 Drag-and-drop image uploads
-- 🔄 Before-and-after comparison slider
-- ⏳ Loading animations and progress indicators
-- ♿ Improved accessibility and keyboard navigation
-- 📦 Batch image processing
-- 🌙 Dark mode support
-- 🛠️ Additional image editing tools
-- 👤 User accounts and saved uploads
-- 📊 File size optimization and compression settings
+-  Drag-and-drop image uploads
+-  Before-and-after comparison slider
+-  Loading animations and progress indicators
+-  Improved accessibility and keyboard navigation
+-  Batch image processing
+-  Dark mode support
+-  Additional image editing tools
+-  User accounts and saved uploads
+-  File size optimization and compression settings
 
 ---
 
