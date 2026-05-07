@@ -38,6 +38,7 @@ removeBtn.addEventListener("click", async () => {
     const imageUrl = URL.createObjectURL(blob);
 
     resultImage.src = imageUrl;
+    resultImage.style.display = "block";
 
     downloadLink.href = imageUrl;
     downloadLink.style.display = "inline-block";
