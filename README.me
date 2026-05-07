@@ -1,0 +1,205 @@
+Background Remover
+
+Live Site:
+Frontend: https://wezy18.github.io/background-remover/frontend/
+
+API Health Endpoint:
+https://background-remover-999520341103.us-central1.run.app/health
+
+The Background Remover is a full-stack web application that allows users to upload an image, automatically remove its background using AI-powered image processing, preview the result instantly, and download a transparent PNG.
+
+This project was built to explore the full workflow of developing and deploying a modern web application, from frontend interaction and responsive UI design to backend API development, Docker containerization, and cloud deployment with Google Cloud Run.
+
+The application focuses on keeping the experience simple, approachable, and responsive while still handling real image processing through a deployed backend service.
+
+About the Project
+
+This project combines a lightweight frontend interface with a Python-based API backend to create a smooth image processing workflow.
+
+Users can:
+
+upload an image directly from the browser
+send the image to a deployed FastAPI backend
+process the image using AI-powered background removal
+preview the finished transparent PNG
+download the processed image instantly
+
+The project was also an opportunity to work through several real-world development and deployment concepts, including:
+
+REST API development with FastAPI
+handling file uploads between frontend and backend systems
+Docker containerization
+deploying cloud services with Google Cloud Run
+configuring CORS between deployed services
+responsive frontend design and UX improvements
+integrating GitHub Pages with a cloud-hosted API
+Features
+AI-powered background removal using rembg
+Image upload and processing directly in the browser
+Instant image preview after processing
+Downloadable transparent PNG output
+Responsive design for desktop and mobile devices
+Custom upload interface with visual feedback
+Cloud-hosted backend API using Google Cloud Run
+Dockerized backend deployment workflow
+GitHub Pages frontend deployment
+Tech Stack
+Frontend
+HTML5
+CSS3
+JavaScript
+Google Fonts (Montserrat)
+Backend
+Python
+FastAPI
+rembg
+Pillow
+ONNX Runtime
+Uvicorn
+Deployment & Tooling
+Docker
+Google Cloud Run
+GitHub Pages
+GitHub
+Project Structure
+background-remover/
+│
+├── backend/
+│   ├── api/
+│   │   └── main.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── runtime.txt
+│
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   ├── app.js
+│   └── images/
+│
+└── README.md
+How It Works
+Frontend Flow
+
+The user selects an image through the custom upload interface.
+
+JavaScript creates a FormData object containing the uploaded file and sends it to the FastAPI backend using a POST request.
+
+Once the backend returns the processed PNG image, the frontend:
+
+creates a temporary object URL
+displays the processed image in the interface
+enables the download button for saving the transparent PNG
+Backend Flow
+
+The FastAPI backend receives the uploaded image through the /remove-bg endpoint.
+
+The image is processed using the rembg library, which uses ONNX-based machine learning models to separate the foreground subject from the background.
+
+The backend then:
+
+converts the processed image into PNG format
+streams the result back to the frontend
+allows the frontend to preview and download the output
+Running the Project Locally
+Clone the Repository
+git clone https://github.com/Wezy18/background-remover.git
+
+Navigate into the project:
+
+cd background-remover
+Backend Setup
+
+Navigate into the backend folder:
+
+cd backend
+Create a Virtual Environment
+python -m venv env
+Activate the Environment
+Windows PowerShell
+.\env\Scripts\Activate.ps1
+Install Dependencies
+pip install -r requirements.txt
+Start the FastAPI Server
+python -m uvicorn api.main:app --reload
+
+The backend will run at:
+
+http://127.0.0.1:8000
+Frontend Setup
+
+Open the frontend folder in VS Code.
+
+To run the frontend locally:
+
+Right click index.html
+Select Open with Live Server
+
+The frontend will communicate with the backend API through the configured fetch endpoint.
+
+API Endpoint
+Remove Background
+POST
+/remove-bg
+Form Data
+Field	Type
+file	image file
+Response
+
+Returns a processed PNG image with the background removed.
+
+Deployment
+Frontend Deployment
+
+The frontend is deployed using GitHub Pages.
+
+Backend Deployment
+
+The backend is containerized using Docker and deployed through Google Cloud Run.
+
+The deployment workflow includes:
+
+GitHub repository integration
+Docker image builds
+automatic Cloud Run deployments
+public API routing
+CORS configuration between frontend and backend services
+Challenges & Learning Experience
+
+One of the main goals of this project was gaining hands-on experience with deployment workflows and cloud-hosted backend services.
+
+During development, I worked through:
+
+configuring FastAPI for cloud deployment
+resolving Cloud Run container startup issues
+setting up Docker for Python applications
+handling CORS between local and deployed environments
+debugging deployment and networking errors
+integrating a frontend hosted separately from the backend API
+
+This project helped strengthen both my frontend development skills and my understanding of backend deployment pipelines.
+
+Possible Future Improvements
+Drag-and-drop image uploads
+Before-and-after comparison slider
+Loading animations and progress indicators
+Improved accessibility and keyboard navigation
+Batch image processing
+Dark mode support
+Additional image editing tools
+User accounts and saved uploads
+File size optimization and compression settings
+Purpose & Career Focus
+
+This project was built to strengthen my experience with full-stack development and cloud deployment workflows while creating a practical, user-focused application.
+
+It reflects:
+
+my growing experience across frontend and backend development
+my ability to integrate multiple technologies into a complete application
+my interest in responsive, approachable UI design
+my experience debugging and deploying real-world web applications
+my ability to work through infrastructure and deployment challenges independently
+Author
+
+Rebecca Corder
